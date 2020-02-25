@@ -3,7 +3,7 @@ def get_data_from_dynamodb():
             import boto3
             from boto3.dynamodb.conditions import Key, Attr
 
-            dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id='ASIAWF6XSDNSKHZ2QS6L', aws_secret_access_key='Ko0uxT833U2pzl5rvI6CYfLl90EMRDaIRid1tWbk', aws_session_token='FwoGZXIvYXdzEKX//////////wEaDPv9yUemXsHjZTaidyLJAU5V6GvqrDllQdCnxS33h0KqYeVa9dVGkPS5/ieP0Eeyf5ZT+OXIazrf8ecl/vKC8bGzlqh2rP9BET23fDvkt8CxGyz61h8HJ2XJziNaPJV5qGxrNwtIzL21HDe2NyszEkSqT6zrB0SVEclsn3oNCDWs9QuWwQ+xLNbhstsozEyTv7kdBQvW4JdVuvGsuR9MowOmm1CyaGmxJFSyaxvroNSMhE7kgS1bxx03cCbPdS51d8XaWLk6vVVgiaUSfkrZZ0hlcA3R3Er7nCj/xMnyBTItITEFFn/nWdp4DjRWS1M8C6wXlbj8hnGrapCeMb9VuQrNd64BPUwou1heoyak')
+            dynamodb = boto3.resource('dynamodb', region_name='us-east-1', aws_access_key_id='ASIAWF6XSDNSNOPLHF5P', aws_secret_access_key='83mhTaO4q1HmE4U4P31/ieRKkfUXYVtaAn6W8Skk', aws_session_token='FwoGZXIvYXdzENj//////////wEaDFty6zj/NLuhO1k4mSLJAbUK/npjrakhQ52+XzST10WX+VqtuxLjRCOtmCHGMa/7z6SUhlVsOF3dTy40atCnu9SILW98WaIUORClmuMoTcNOCfEMH+kkqhy0gkb1YPvF/PzJMsauzysl48ifmlfZjJs/jzuh8Xj5Apz4FWeI9CB2tRhJK50RwUUHEiuRNTvX7KiJesfysD7kOz24jTFwyel+RjKdcwZG3e5+ViOPbq1ro8lCmRKTTyU990wiOQ7uFnc+pe6pPqAEupUo1JGF0EAK5BSpmrVcgiiM1dTyBTItfXy8x21xaMwL+YULiSftatrolirSbr8kSNdm2+0jGjrOMv2yuAFuZVCPQO57')
 
 
             startdate = '2020-02'

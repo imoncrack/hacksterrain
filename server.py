@@ -34,5 +34,26 @@ def getDHT():
     print(data)
     return jsonify(data)
 
+from gpiozero import LED
+led = LED(4)
+
+def ledOn():
+  led.blink()
+  return "LED is On"
+
+def ledOff():
+  led.off()
+  return "LED is Off"
+
+@app.route("/writeLED/<status>")
+def writePin(status):
+
+   if status == 'On':
+     response = ledOn()
+   else:
+     response = ledOff()
+
+   return response
+
 
 app.run(debug=True,host="0.0.0.0")

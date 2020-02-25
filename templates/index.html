@@ -4,6 +4,36 @@
     <title>Google Charts with Flask</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+
+            function turnon(){
+              $.ajax({url: "writeLED/On",
+                      success: function(result){
+                                    $("#ledstatus").html(result);
+                                    }
+                    })
+            }
+        
+            function turnoff(){
+              $.ajax({url: "writeLED/Off",
+                      success: function(result){
+                                    $("#ledstatus").html(result);
+                                    }
+              })
+            }
+        
+            $(document).ready(function(){
+                $("#b1").click(function(){
+                       turnon();
+                });
+              $("#b2").click(function(){
+                       turnoff();
+                });
+        
+        
+           });
+        
+    </script>
     <script type="text/javascript">
          google.charts.load('current', {'packages':['corechart','table']});
         // Set a callback to run when the Google Visualization API is loaded.
@@ -118,13 +148,27 @@
        });
  
  </script>
- 
+ <style>
+     #temp {
+         float : left;
+     }   
+     #buttonNStatus {
+         float: right;
+     }
+ </style>
 </head>
 <body>
         <input id="buttonloadchart" type="button" onclick="loadChart()" value="Update graph">
         <div id="status"></div>
         <div id="chart_div" style="width:100%"></div>
         <div id="table_div" style="width:100%"></div>
-        <div class="temperature"> <span id="dhtstatus"> </span></div>
+        <div id="temp"> <span id="dhtstatus"> </span></div>
+        <div id="buttonNStatus">
+        LED action:
+        <button id="b1">Turn on</button>
+        <button id="b2">Turn off</button>
+        <h2 id="ledstatus"></h2>
+        </div>
+
 </body>
 </html>
